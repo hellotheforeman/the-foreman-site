@@ -2,14 +2,14 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --yellow: #F5C842;
-  --yellow-dark: #E0B52E;
-  --dark: #1A1A1A;
-  --dark2: #2C2C2C;
-  --mid: #555;
-  --light: #F7F7F5;
-  --white: #ffffff;
-  --border: #E5E5E5;
+  --yellow: #FDB926;
+  --yellow-dark: #E5A615;
+  --dark: #111A21;
+  --dark2: #1A2730;
+  --mid: #8A9BA8;
+  --light: #1A2730;
+  --white: #FDFDFD;
+  --border: #2A3740;
   --green: #25D366;
   --radius: 12px;
   --radius-lg: 20px;
@@ -18,8 +18,8 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background: var(--white);
-  color: var(--dark);
+  background: var(--dark);
+  color: var(--white);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
@@ -34,7 +34,7 @@ body {
 .nav {
   position: sticky;
   top: 0;
-  background: var(--white);
+  background: var(--dark);
   border-bottom: 1px solid var(--border);
   z-index: 100;
   padding: 16px 0;
@@ -49,8 +49,17 @@ body {
 .logo {
   font-size: 1.2rem;
   font-weight: 800;
-  color: var(--dark);
+  color: var(--white);
   letter-spacing: -0.5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logo img {
+  height: 32px;
+  width: auto;
 }
 
 /* === BUTTONS === */
@@ -67,13 +76,13 @@ body {
 }
 
 .btn-nav {
-  background: var(--dark);
+  background: var(--light);
   color: var(--white);
   padding: 10px 20px;
   font-size: 0.875rem;
 }
 
-.btn-nav:hover { background: var(--dark2); }
+.btn-nav:hover { background: var(--dark2); border: 1px solid var(--border); }
 
 .btn-primary {
   background: var(--yellow);
@@ -99,14 +108,14 @@ body {
 .hero {
   padding: 80px 0 60px;
   text-align: center;
-  background: var(--white);
+  background: var(--dark);
 }
 
 .hero-badge {
   display: inline-block;
-  background: #FFF8E1;
-  color: #A07800;
-  border: 1px solid #F5C842;
+  background: rgba(253, 185, 38, 0.15);
+  color: var(--yellow);
+  border: 1px solid var(--yellow);
   padding: 6px 16px;
   border-radius: 100px;
   font-size: 0.8rem;
@@ -122,7 +131,7 @@ body {
   line-height: 1.1;
   letter-spacing: -1.5px;
   margin-bottom: 20px;
-  color: var(--dark);
+  color: var(--white);
 }
 
 .highlight {
@@ -156,6 +165,7 @@ body {
   letter-spacing: -0.8px;
   text-align: center;
   margin-bottom: 12px;
+  color: var(--white);
 }
 
 .section-sub {
@@ -242,7 +252,7 @@ body {
 /* === FEATURES === */
 .features {
   padding: 80px 0;
-  background: var(--white);
+  background: var(--dark);
 }
 
 .features-grid {
@@ -262,7 +272,8 @@ body {
 
 .feature-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.07);
+  box-shadow: 0 8px 24px rgba(253, 185, 38, 0.15);
+  border-color: var(--yellow);
 }
 
 .feature-icon {
@@ -274,7 +285,7 @@ body {
   font-size: 1.05rem;
   font-weight: 700;
   margin-bottom: 8px;
-  color: var(--dark);
+  color: var(--white);
 }
 
 .feature-card p {
@@ -291,7 +302,7 @@ body {
 }
 
 .trades .section-title { color: var(--white); }
-.trades .section-sub { color: #aaa; }
+.trades .section-sub { color: var(--mid); }
 
 .trades-grid {
   display: grid;
@@ -302,7 +313,7 @@ body {
 
 .trade {
   background: var(--dark2);
-  border: 1px solid #3a3a3a;
+  border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 16px;
   text-align: center;
@@ -312,7 +323,7 @@ body {
 }
 
 .trade:hover {
-  background: #383838;
+  background: var(--light);
   border-color: var(--yellow);
 }
 
@@ -354,6 +365,7 @@ body {
   font-size: 1.1rem;
   font-weight: 700;
   margin-bottom: 6px;
+  color: var(--white);
 }
 
 .step-text p {
@@ -384,14 +396,14 @@ body {
 .stat-label {
   font-size: 0.9rem;
   font-weight: 500;
-  color: #5a4000;
+  color: var(--dark);
   margin-top: 4px;
 }
 
 /* === WAITLIST === */
 .waitlist {
   padding: 80px 0;
-  background: var(--white);
+  background: var(--dark);
   text-align: center;
 }
 
@@ -400,6 +412,7 @@ body {
   font-weight: 900;
   letter-spacing: -1px;
   margin-bottom: 16px;
+  color: var(--white);
 }
 
 .waitlist p {
@@ -432,15 +445,22 @@ body {
   font-family: 'Inter', sans-serif;
   outline: none;
   transition: border-color 0.15s;
+  background: var(--light);
+  color: var(--white);
 }
 
 .waitlist-form input:focus {
   border-color: var(--yellow);
+  background: var(--dark2);
+}
+
+.waitlist-form input::placeholder {
+  color: var(--mid);
 }
 
 .form-note {
   font-size: 0.8rem;
-  color: #999;
+  color: var(--mid);
   margin-top: 4px;
 }
 
@@ -448,7 +468,8 @@ body {
 .footer {
   padding: 40px 0;
   background: var(--dark);
-  color: #aaa;
+  color: var(--mid);
+  border-top: 1px solid var(--border);
 }
 
 .footer-inner {
@@ -468,7 +489,8 @@ body {
 
 .footer-copy {
   font-size: 0.8rem;
-  color: #666;
+  color: var(--mid);
+  opacity: 0.7;
 }
 
 /* === MOBILE === */
