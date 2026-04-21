@@ -37,7 +37,7 @@ body {
   background: var(--dark);
   border-bottom: 1px solid var(--border);
   z-index: 100;
-  padding: 16px 0;
+  padding: 8px 0;
 }
 
 .nav-inner {
@@ -58,7 +58,7 @@ body {
 }
 
 .logo img {
-  height: 64px;
+  height: 80px;
   width: auto;
 }
 
