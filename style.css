@@ -58,7 +58,7 @@ body {
 }
 
 .logo img {
-  height: 100px;
+  height: 67px;
   width: auto;
 }
 
@@ -495,6 +495,8 @@ body {
 
 /* === MOBILE === */
 @media (max-width: 768px) {
+  .logo img { height: 33px; }
+
   .hero { padding: 60px 0 40px; }
 
   .features-grid {
