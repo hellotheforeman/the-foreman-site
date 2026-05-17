@@ -3,12 +3,77 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sign Up — The Foreman</title>
-  <meta name="description" content="Sign up for The Foreman — your AI trade assistant on WhatsApp." />
+  <title>Get Started — The Foreman</title>
+  <meta name="description" content="Get started with The Foreman — quotes, invoices and payment tracking, all from WhatsApp." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .signup-page {
+      padding: 100px 0 80px;
+      text-align: center;
+    }
+    .signup-page h1 {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 900; letter-spacing: -1px;
+      margin-bottom: 16px; color: var(--white);
+      line-height: 1.15;
+    }
+    .signup-page h1 span { color: var(--yellow); }
+    .signup-page .subtitle {
+      color: var(--mid); max-width: 460px;
+      margin: 0 auto 40px; font-size: 1.05rem;
+      line-height: 1.7;
+    }
+    .whatsapp-btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: #25D366; color: #fff;
+      padding: 16px 32px; border-radius: 10px;
+      font-weight: 700; font-size: 1.05rem;
+      text-decoration: none; transition: all 0.15s ease;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+      font-family: 'Inter', sans-serif;
+    }
+    .whatsapp-btn:hover {
+      background: #1ebe5c;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(37, 211, 102, 0.4);
+    }
+    .whatsapp-btn svg { width: 22px; height: 22px; flex-shrink: 0; }
+    .steps-section {
+      padding: 80px 0;
+      border-top: 1px solid var(--border);
+    }
+    .steps-section h2 {
+      text-align: center;
+      font-size: 1.3rem; font-weight: 800;
+      letter-spacing: -0.5px; margin-bottom: 48px;
+      color: var(--white);
+    }
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px; max-width: 800px; margin: 0 auto;
+    }
+    .step-card { text-align: center; }
+    .step-num-circle {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: rgba(253, 185, 38, 0.15);
+      border: 1px solid rgba(253, 185, 38, 0.3);
+      color: var(--yellow); font-weight: 800; font-size: 1rem;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 16px;
+    }
+    .step-card h3 {
+      font-size: 0.95rem; font-weight: 700;
+      color: var(--white); margin-bottom: 8px;
+    }
+    .step-card p { font-size: 0.875rem; color: var(--mid); line-height: 1.6; }
+    @media (max-width: 600px) {
+      .steps-grid { grid-template-columns: 1fr; gap: 24px; }
+    }
+  </style>
 </head>
 <body>
 
@@ -22,24 +87,43 @@
     </div>
   </header>
 
-  <!-- SIGNUP FORM -->
-  <section class="waitlist">
+  <!-- HERO -->
+  <section class="signup-page">
     <div class="container">
-      <div class="hero-badge">AI-powered trade assistant</div>
-      <h2>Get started with The Foreman</h2>
-      <p>Sign your business up now and we'll activate your WhatsApp number for The Foreman.</p>
-      <form action="thanks.html" method="GET" class="waitlist-form">
-        <div class="form-row">
-          <input type="text" name="name" placeholder="Your name" required />
-          <input type="text" name="business" placeholder="Business name" required />
+      <div class="hero-badge">WhatsApp · No app needed</div>
+      <h1>Ready to get started?<br><span>Just tap the button.</span></h1>
+      <p class="subtitle">Opens WhatsApp and connects you straight to The Foreman. No forms, no waiting — you're up and running straight away.</p>
+      <!-- TODO: replace YOUR_NUMBER with the Twilio WhatsApp number digits only, e.g. 447700900123 -->
+      <a href="https://wa.me/YOUR_NUMBER?text=Hi" class="whatsapp-btn" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        Get started on WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- STEPS -->
+  <section class="steps-section">
+    <div class="container">
+      <h2>Here's what happens next</h2>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num-circle">1</div>
+          <h3>Tap the button above</h3>
+          <p>Opens WhatsApp with The Foreman ready to go. No app to download, no account to create.</p>
         </div>
-        <div class="form-row">
-          <input type="email" name="email" placeholder="Email address" required />
-          <input type="tel" name="phone" placeholder="Phone number" required />
+        <div class="step-card">
+          <div class="step-num-circle">2</div>
+          <h3>Quick setup</h3>
+          <p>The Foreman will ask a few questions — business name, trade, bank details. Takes about a minute.</p>
         </div>
-        <button type="submit" class="btn btn-primary btn-large btn-full">Sign up now →</button>
-        <p class="form-note">We'll be in touch as soon as early access opens up.</p>
-      </form>
+        <div class="step-card">
+          <div class="step-num-circle">3</div>
+          <h3>Quotes, invoices, done</h3>
+          <p>Send professional PDFs, track who owes you, and chase late payments — all from WhatsApp.</p>
+        </div>
+      </div>
     </div>
   </section>
 
