@@ -518,7 +518,7 @@ body {
 
 /* === MOBILE === */
 @media (max-width: 768px) {
-  .logo img { height: 33px; }
+  .logo img { height: 48px; }
 
   .hero { padding: 60px 0 40px; }
 
