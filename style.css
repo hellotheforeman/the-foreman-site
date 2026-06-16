@@ -176,10 +176,11 @@ body {
   margin: 0 auto 48px;
 }
 
-.chat-window {
+.demo-video {
+  display: block;
   max-width: 480px;
+  width: 100%;
   margin: 0 auto;
-  background: #ECE5DD;
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: 0 20px 60px rgba(0,0,0,0.12);
