@@ -153,6 +153,37 @@ body {
   font-size: 0.875rem;
 }
 
+/* === WELCOME VIDEO (placeholder pending Runway render) === */
+.welcome {
+  padding: 80px 0;
+  background: var(--dark);
+}
+
+.welcome-video-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  max-width: 480px;
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
+  border-radius: var(--radius-lg);
+  border: 2px dashed var(--yellow);
+  background: rgba(253, 185, 38, 0.08);
+  color: var(--yellow);
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 24px;
+}
+
+.welcome-video-placeholder span {
+  font-weight: 400;
+  font-size: 0.85rem;
+  color: var(--mid);
+}
+
 /* === DEMO / CHAT === */
 .demo {
   padding: 80px 0;
