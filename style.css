@@ -153,37 +153,6 @@ body {
   font-size: 0.875rem;
 }
 
-/* === WELCOME VIDEO (placeholder pending Runway render) === */
-.welcome {
-  padding: 80px 0;
-  background: var(--dark);
-}
-
-.welcome-video-placeholder {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  max-width: 480px;
-  aspect-ratio: 1 / 1;
-  margin: 0 auto;
-  border-radius: var(--radius-lg);
-  border: 2px dashed var(--yellow);
-  background: rgba(253, 185, 38, 0.08);
-  color: var(--yellow);
-  font-weight: 600;
-  font-size: 1.1rem;
-  text-align: center;
-  padding: 24px;
-}
-
-.welcome-video-placeholder span {
-  font-weight: 400;
-  font-size: 0.85rem;
-  color: var(--mid);
-}
-
 /* === DEMO / CHAT === */
 .demo {
   padding: 80px 0;
@@ -326,37 +295,43 @@ body {
   line-height: 1.6;
 }
 
-/* === TRADES === */
-.trades {
+/* === TRUST === */
+.trust {
   padding: 80px 0;
-  background: var(--dark);
-  color: var(--white);
+  background: var(--light);
 }
 
-.trades .section-title { color: var(--white); }
-.trades .section-sub { color: var(--mid); }
-
-.trades-grid {
+.trust-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
-  margin-top: 40px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 720px;
+  margin: 48px auto 0;
 }
 
-.trade {
+.trust-item {
   background: var(--dark2);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 16px;
-  text-align: center;
-  font-size: 0.9rem;
-  font-weight: 500;
-  transition: background 0.15s;
+  padding: 28px 24px;
 }
 
-.trade:hover {
-  background: var(--light);
-  border-color: var(--yellow);
+.trust-icon {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+}
+
+.trust-item h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--white);
+}
+
+.trust-item p {
+  color: var(--mid);
+  font-size: 0.9rem;
+  line-height: 1.6;
 }
 
 /* === HOW IT WORKS === */
@@ -642,8 +617,8 @@ body {
     grid-template-columns: 1fr;
   }
 
-  .trades-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .trust-grid {
+    grid-template-columns: 1fr;
   }
 
   .proof-stat-grid {
@@ -660,10 +635,6 @@ body {
 
 @media (max-width: 480px) {
   .hero h1 { letter-spacing: -1px; }
-
-  .trades-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
 
   .btn-large {
     padding: 14px 24px;
