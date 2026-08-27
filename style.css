@@ -641,3 +641,16 @@ body {
     font-size: 1rem;
   }
 }
+
+/* === DESKTOP (taller section spacing) === */
+@media (min-width: 769px) {
+  .hero { padding: 120px 0 90px; }
+  .demo { padding: 120px 0; }
+  .features { padding: 120px 0; }
+  .trust { padding: 120px 0; }
+  .how { padding: 120px 0; }
+  .proof { padding: 90px 0; }
+  .waitlist { padding: 120px 0; }
+  .faq-hero { padding: 120px 0 90px; }
+  .faq-section { padding: 90px 0 120px; }
+}
