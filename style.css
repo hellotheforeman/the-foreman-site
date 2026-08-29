@@ -278,8 +278,13 @@ body {
 }
 
 .feature-icon {
-  font-size: 2rem;
   margin-bottom: 16px;
+  color: var(--yellow);
+}
+
+.feature-icon svg {
+  width: 30px;
+  height: 30px;
 }
 
 .feature-card h3 {
@@ -317,8 +322,13 @@ body {
 }
 
 .trust-icon {
-  font-size: 1.8rem;
   margin-bottom: 12px;
+  color: var(--yellow);
+}
+
+.trust-icon svg {
+  width: 26px;
+  height: 26px;
 }
 
 .trust-item h3 {
@@ -542,6 +552,48 @@ body {
 
 .footer-links a:hover {
   color: var(--white);
+}
+
+/* === STICKY MOBILE CTA === */
+.sticky-cta {
+  display: none;
+  position: fixed;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  z-index: 150;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: var(--yellow);
+  color: var(--dark);
+  font-weight: 700;
+  font-size: 0.95rem;
+  font-family: 'Inter', sans-serif;
+  padding: 14px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+}
+
+.sticky-cta svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.sticky-cta.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+@media (max-width: 768px) {
+  .sticky-cta { display: flex; }
 }
 
 /* === COOKIE CONSENT BANNER === */
