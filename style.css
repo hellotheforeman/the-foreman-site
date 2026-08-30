@@ -746,6 +746,23 @@ body {
 @media (max-width: 768px) {
   .logo img { height: 48px; }
 
+  /* Each major section fills at least 90% of the viewport height on
+     mobile, content vertically centered within it. Sections whose
+     content already runs longer than that (features, reviews) are
+     unaffected — min-height never clips. */
+  .hero,
+  .demo,
+  .features,
+  .trust,
+  .how,
+  .reviews,
+  .waitlist {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   .hero { padding: 60px 0 40px; }
 
   .features-grid {
