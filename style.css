@@ -714,9 +714,13 @@ body {
   .logo img { height: 48px; }
 
   /* Each major section fills at least 90% of the viewport height on
-     mobile, content vertically centered within it. Sections whose
-     content already runs longer than that (features, reviews) are
-     unaffected — min-height never clips. */
+     mobile. Top-aligned (not centered) with a fixed top gap, so every
+     title sits the same distance from the section edge regardless of
+     how much content follows — centering pushed short sections' titles
+     down by half their leftover space, giving each an inconsistent gap
+     and pushing the hero content low. Any leftover height falls below
+     the content instead. Sections already taller than 90vh (features,
+     reviews) are unaffected either way — min-height never clips. */
   .hero,
   .demo,
   .features,
@@ -727,10 +731,7 @@ body {
     min-height: 90vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    /* Small, uniform breathing room — vertical centering does the real
-       positioning now, so the old 80px section padding (60/40 for hero)
-       was stacking on top of it and pushing everything down. */
+    justify-content: flex-start;
     padding: 32px 0;
   }
 
