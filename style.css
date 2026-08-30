@@ -278,39 +278,6 @@ body {
   line-height: 1.6;
 }
 
-.data-note {
-  max-width: 720px;
-  margin: 32px auto 0;
-  padding: 28px 28px 24px;
-  background: var(--dark);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-}
-
-.data-note h3 {
-  font-size: 1.05rem;
-  font-weight: 700;
-  margin-bottom: 10px;
-  color: var(--white);
-}
-
-.data-note p {
-  color: var(--mid);
-  font-size: 0.95rem;
-  line-height: 1.7;
-}
-
-.data-note-link {
-  margin-top: 12px;
-}
-
-.data-note-link a {
-  color: var(--yellow);
-  font-size: 0.9rem;
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
-
 /* === HOW IT WORKS === */
 .how {
   padding: 80px 0;
@@ -761,9 +728,11 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    /* Small, uniform breathing room — vertical centering does the real
+       positioning now, so the old 80px section padding (60/40 for hero)
+       was stacking on top of it and pushing everything down. */
+    padding: 32px 0;
   }
-
-  .hero { padding: 60px 0 40px; }
 
   .features-grid {
     grid-template-columns: 1fr;
