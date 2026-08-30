@@ -355,6 +355,76 @@ body {
   font-size: 0.95rem;
 }
 
+/* === REVIEWS === */
+.reviews {
+  padding: 80px 0;
+  background: var(--dark);
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.review-card {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 28px 24px 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.review-card blockquote {
+  margin: 0 0 20px;
+  flex: 1;
+}
+
+.review-card blockquote p {
+  color: var(--white);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.review-person {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+}
+
+.review-person img {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 22%;
+  flex-shrink: 0;
+}
+
+.review-meta {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.review-name {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--white);
+}
+
+.review-role {
+  font-size: 0.8rem;
+  color: var(--mid);
+  margin-top: 2px;
+}
+
 /* === WHATSAPP BUTTON === */
 .whatsapp-btn {
   display: inline-flex;
@@ -678,6 +748,10 @@ body {
   .trust-grid {
     grid-template-columns: 1fr;
   }
+
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 480px) {
@@ -691,6 +765,7 @@ body {
   .features { padding: 120px 0; }
   .trust { padding: 120px 0; }
   .how { padding: 120px 0; }
+  .reviews { padding: 120px 0; }
   .waitlist { padding: 120px 0; }
   .faq-hero { padding: 120px 0 90px; }
   .faq-section { padding: 90px 0 120px; }
