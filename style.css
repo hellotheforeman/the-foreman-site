@@ -4,13 +4,11 @@
 :root {
   --yellow: #FDB926;
   --yellow-dark: #E5A615;
-  --dark: #182025;
-  --dark2: #1A2730;
-  --mid: #8A9BA8;
-  --light: #1A2730;
+  --dark: #182025;      /* page background */
+  --surface: #1A2730;   /* raised surfaces: cards, alt sections */
+  --mid: #8A9BA8;       /* secondary text */
   --white: #FDFDFD;
   --border: #2A3740;
-  --green: #FDB926;
   --radius: 12px;
   --radius-lg: 20px;
   font-size: 16px;
@@ -76,13 +74,13 @@ body {
 }
 
 .btn-nav {
-  background: var(--light);
+  background: var(--surface);
   color: var(--white);
   padding: 10px 20px;
   font-size: 0.875rem;
 }
 
-.btn-nav:hover { background: var(--dark2); border: 1px solid var(--border); }
+.btn-nav:hover { background: var(--surface); border: 1px solid var(--border); }
 
 .btn-primary {
   background: var(--yellow);
@@ -94,12 +92,6 @@ body {
   background: var(--yellow-dark);
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(253, 185, 38, 0.4);
-}
-
-.btn-large {
-  padding: 16px 32px;
-  font-size: 1.05rem;
-  border-radius: 10px;
 }
 
 .btn-full { width: 100%; text-align: center; }
@@ -125,17 +117,21 @@ body {
   margin-bottom: 24px;
 }
 
+/* Anton on the hero headline only — matches the ad creative someone just
+   clicked from. Inter stays everywhere else so the page doesn't shout. */
 .hero h1 {
-  font-size: clamp(2.2rem, 6vw, 3.6rem);
-  font-weight: 900;
-  line-height: 1.1;
-  letter-spacing: -1.5px;
+  font-family: 'Anton', 'Inter', sans-serif;
+  font-size: clamp(2.5rem, 6.5vw, 4rem);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: 0;
+  text-transform: uppercase;
   margin-bottom: 20px;
   color: var(--white);
 }
 
 .highlight {
-  color: var(--green);
+  color: var(--yellow);
   position: relative;
 }
 
@@ -156,7 +152,7 @@ body {
 /* === DEMO / CHAT === */
 .demo {
   padding: 80px 0;
-  background: var(--light);
+  background: var(--surface);
 }
 
 .section-title {
@@ -186,70 +182,6 @@ body {
   box-shadow: 0 20px 60px rgba(0,0,0,0.12);
 }
 
-.chat-header {
-  background: #075E54;
-  color: white;
-  padding: 16px 20px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.chat-avatar {
-  width: 42px;
-  height: 42px;
-  background: #128C7E;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2rem;
-  flex-shrink: 0;
-}
-
-.chat-name {
-  font-weight: 700;
-  font-size: 0.95rem;
-}
-
-.chat-status {
-  font-size: 0.75rem;
-  opacity: 0.85;
-  color: var(--yellow);
-}
-
-.chat-body {
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  max-height: 480px;
-  overflow-y: auto;
-}
-
-.msg {
-  max-width: 80%;
-  padding: 10px 14px;
-  border-radius: 12px;
-  font-size: 0.875rem;
-  line-height: 1.5;
-}
-
-.msg.sent {
-  background: #DCF8C6;
-  align-self: flex-end;
-  border-bottom-right-radius: 4px;
-  color: var(--dark);
-}
-
-.msg.received {
-  background: var(--white);
-  align-self: flex-start;
-  border-bottom-left-radius: 4px;
-  color: var(--dark);
-  box-shadow: 0 1px 2px rgba(0,0,0,0.08);
-}
-
 /* === FEATURES === */
 .features {
   padding: 80px 0;
@@ -264,7 +196,7 @@ body {
 }
 
 .feature-card {
-  background: var(--light);
+  background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 28px 24px;
@@ -303,7 +235,7 @@ body {
 /* === TRUST === */
 .trust {
   padding: 80px 0;
-  background: var(--light);
+  background: var(--surface);
 }
 
 .trust-grid {
@@ -315,7 +247,7 @@ body {
 }
 
 .trust-item {
-  background: var(--dark2);
+  background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 28px 24px;
@@ -344,10 +276,43 @@ body {
   line-height: 1.6;
 }
 
+.data-note {
+  max-width: 720px;
+  margin: 32px auto 0;
+  padding: 28px 28px 24px;
+  background: var(--dark);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.data-note h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--white);
+}
+
+.data-note p {
+  color: var(--mid);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.data-note-link {
+  margin-top: 12px;
+}
+
+.data-note-link a {
+  color: var(--yellow);
+  font-size: 0.9rem;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 /* === HOW IT WORKS === */
 .how {
   padding: 80px 0;
-  background: var(--light);
+  background: var(--surface);
 }
 
 .steps {
@@ -388,33 +353,6 @@ body {
 .step-text p {
   color: var(--mid);
   font-size: 0.95rem;
-}
-
-/* === SOCIAL PROOF === */
-.proof {
-  padding: 60px 0;
-  background: var(--yellow);
-}
-
-.proof-stat-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  text-align: center;
-}
-
-.stat-num {
-  font-size: clamp(2rem, 5vw, 3rem);
-  font-weight: 900;
-  letter-spacing: -1px;
-  color: var(--dark);
-}
-
-.stat-label {
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: var(--dark);
-  margin-top: 4px;
 }
 
 /* === WHATSAPP BUTTON === */
@@ -468,34 +406,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 12px;
-}
-
-.form-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-}
-
-.waitlist-form input {
-  width: 100%;
-  padding: 14px 16px;
-  border: 1.5px solid var(--border);
-  border-radius: 8px;
-  font-size: 0.95rem;
-  font-family: 'Inter', sans-serif;
-  outline: none;
-  transition: border-color 0.15s;
-  background: var(--light);
-  color: var(--white);
-}
-
-.waitlist-form input:focus {
-  border-color: var(--yellow);
-  background: var(--dark2);
-}
-
-.waitlist-form input::placeholder {
-  color: var(--mid);
 }
 
 .form-note {
@@ -602,7 +512,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: var(--dark2);
+  background: var(--surface);
   border-top: 1px solid var(--border);
   padding: 20px 0;
   z-index: 200;
@@ -707,7 +617,7 @@ body {
 }
 
 .faq-item {
-  background: var(--light);
+  background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
@@ -768,26 +678,10 @@ body {
   .trust-grid {
     grid-template-columns: 1fr;
   }
-
-  .proof-stat-grid {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-
-  .form-row {
-    grid-template-columns: 1fr;
-  }
-
-  .chat-body { max-height: 380px; }
 }
 
 @media (max-width: 480px) {
   .hero h1 { letter-spacing: -1px; }
-
-  .btn-large {
-    padding: 14px 24px;
-    font-size: 1rem;
-  }
 }
 
 /* === DESKTOP (taller section spacing) === */
@@ -797,7 +691,6 @@ body {
   .features { padding: 120px 0; }
   .trust { padding: 120px 0; }
   .how { padding: 120px 0; }
-  .proof { padding: 90px 0; }
   .waitlist { padding: 120px 0; }
   .faq-hero { padding: 120px 0 90px; }
   .faq-section { padding: 90px 0 120px; }
